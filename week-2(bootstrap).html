@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Bootstrap</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <style>
+            .dmyboxb {
+                height: 100px;
+                background-color: #ff0606;
+                padding: 5px;
+            }
+
+            .dmyboxw {
+                height: 50px;
+                background-color: #00ffaa;
+            }
+
+            .dmyboxwn {
+                height: 50px;
+                background-color: #422b00;
+            }
+        </style>
+    </head>
+
+    <body class="container">
+        <h3>Bootstrap</h3>
+        column managment
+        <div class="col-12 row">
+            <div class="col-md-6 dmyboxb row">
+                <div class="col-md-6 dmyboxw"></div>
+                <div class="col-md-6 dmyboxwn"></div>
+            </div>
+            <div class="col-md-6 dmyboxb row">
+                <div class="col-md-6 dmyboxw"></div>
+                <div class="col-md-6 dmyboxwn"></div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="button" class="btn btn-primary mt-" data-toggle="modal" data-target="#myModal">Open modal</button>
+
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                    Modal body..
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p>Tabbing:-</p>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">tab-1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">tab-2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">tab-3</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Tab - 1</div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Tab - 2</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Tab - 3</div>
+            </div>
+        </div>
+        
+        <div>
+            <button class="btn btn-success" onclick="opensweetalert()">Click to Sweet-Alert</button>
+            <script>
+                function wl() {
+                    document.write("Hello World!");
+                }
+                function opensweetalert() {
+                    swal({
+                        text: "Two buttons…",
+                        buttons: {
+                            cancel: "cancel",
+                            ok: true,
+                        },
+                        }).then((value) => {
+                        switch(value) {
+                            case "ok":
+                            wl();
+                            break;
+
+                            default:
+                                swal("Got away!");
+                        }
+                    });
+                }
+            </script>
+        </div>
+
+        <div>
+            <marquee width="100%" direction="up" height="10%">
+                This is sample up scrolling text.
+            </marquee>
+
+            <marquee width="100%" direction="left" height="10%">
+                This is sample left scrolling text.
+            </marquee>
+
+            <marquee width="100%" direction="right" height="10%">
+                This is sample right scrolling text.
+            </marquee>
+
+            <marquee width="100%" direction="down" height="10%">
+                This is sample down scrolling text.
+            </marquee>
+
+            <marquee width="100%" direction="left" height="10%" onmousedown="this.stop();" onmouseup="this.start();">
+                This is sample scrolling text click to hold.
+            </marquee>
+
+            <marquee width="100%" direction="right" height="10%" scrollamount="15">
+                This is sample speedy right scrolling text.
+            </marquee>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+git clone <remote_URL> :- to clone git data from remote url
+git init:- to detact git data from dir
+git commit:- to take current screenshot of data
+git add:- to add files in git dir
+git diff:- to anylyse current state of git repo and works with git log
+git stash:- to quickly switch works or project
+.gitignore:- to ignore some files from git
+git remote:- to manage connections to other repo
+git fetch:- to download git dir in local device
+git push:- to upload online
+git pull:- to pull data og git repo online to local device
+git merge:-to merge branches into current branch
+
+git branch <b-name> :- to create new branch
+git checkout :- to switch already available branch
+
+git push --set-upstream origin <b name> :- for update local branch in remote server

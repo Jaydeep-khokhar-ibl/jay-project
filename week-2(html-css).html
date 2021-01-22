@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <title>Html Pre</title>
+        
+        <style>
+            @media only screen and (max-width: 600px) {
+                body {
+                    background-color: lightblue;
+                }
+                }
+            div{
+                border: 1px solid black;
+                padding: 10px;
+                margin: 10px;
+            }
+            
+            .fdivclass{
+                text-align: center;
+                color: rgb(255, 251, 0);
+                background: #0f0f0f;
+            }
+            #fdivid {
+                margin: 0 auto;
+                text-align: center;
+                color: red;
+                
+                height: 5rem;
+                width: 90%;
+                
+                outline-style: solid;
+                outline-color: red;
+                outline-width: medium;
+                outline-offset: 5px;
+            }
+
+            .textcapclass {
+                text-transform: capitalize;
+            }
+
+            .textltclass {
+                text-decoration: line-through;
+            }
+
+            .classforhover {
+                position: static;
+
+                float: right;
+
+                background-color: white;
+                color: blue;
+                border: 1px solid blue;
+                padding: 20px;
+                border-radius: 10px;
+
+                transition: 1s;
+            }
+            .classforhover:hover {
+                background-color: blue;
+                color: white;
+                border: 1px solid white;
+            }
+
+            .opacity {
+                opacity: 0.5;
+            }
+
+            .noborder {
+                display: inline-block;
+                border: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="fdivclass">
+            <b>HTML Text Tags</b>
+            <br>
+            <p>Hello this is P tag</p>
+            <h1>H1</h1>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+            <h5>H5</h5>
+            <h6>H6</h6>
+            
+            <strong>Strong tag</strong>
+            <p>this is <em>em tag</em> </p>
+        </div>
+
+        <div id="fdivid">this is one line and this <br>break through br tag</div>
+
+        <div> 
+            <h3>ol with li tag is used for ordered list</h3>
+            <b>Ex:-</b>
+            <ol>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ol>
+        </div>
+
+        <div>
+            <button class="classforhover">Hover</button>
+            
+            <p class="textcapclass">all is in small but css will make it capitalize</p>
+            <p class="textltclass">this is line through</p>
+        </div>
+
+        <div> 
+            <h3>ul with li tag is used for unordered list</h3>
+            <b>Ex:-</b>
+            <ul>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+        </div>
+
+        <div> 
+            <h3>dl, dt, dd tag is used to create descrption list</h3>
+            <b>Ex:-</b>
+            <dl>
+                <dt>one</dt>
+                <dd>First number</dd>
+                <dt>two</dt>
+                <dd>second number</dd>
+            </dl>
+        </div>
+
+        <div>
+            <h3>this is menu tag</h3>
+            <menu>  
+                <li>Home</li>  
+                <li>Registration</li>  
+                <li>Contact-us</li>  
+                <li>About-us</li>  
+             </menu> 
+        </div>
+
+        <div class="twoimgcol">
+            <div class="noborder">
+                <h3>This is Img tag</h3>
+                <img src="https://picsum.photos/seed/picsum/300/200">
+            </div>
+
+            <div class="noborder">
+                <h3>This is Img with opacity</h3>
+                <img src="https://picsum.photos/seed/picsum/300/200" class="opacity">
+            </div>
+        </div>
+
+        <div>
+            <h3>This is direct Video</h3>
+            <video controls>
+                <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div>
+            <h3>This is youtube Video</h3>
+            <iframe src="https://www.youtube.com/embed/C0DPdy98e4c" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div>
+            <h3>This is PDF file display</h3>
+            <iframe src="http://www.africau.edu/images/default/sample.pdf" frameborder="0" width="100%"></iframe>
+        </div>
+
+        <div>
+            <h3>This is table with table, thead, tr, th tags</h3>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>Savings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>January</td>
+                    <td>$100</td>
+                  </tr>
+                  <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Sum</td>
+                    <td>$180</td>
+                  </tr>
+                </tfoot>
+              </table>
+        </div>
+
+        <div>
+            <h3>All form tag</h3>
+
+            <form action="" method="GET">
+                <fieldset>
+                    <legend>Form:</legend>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br>
+                    <br>
+                    <input type="radio" id="male" name="gender" value="male" checked="checked">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <br>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> I have a bike</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2"> I have a car</label><br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+
+        <div>
+            <h3>This is noscript tag shown only if browser is not supporting js</h3>
+            <noscript>Sorry, your browser does not support JavaScript!</noscript>
+        </div>
+
+        <div>
+            <h3>iframe tag</h3>
+            <iframe src="http://example.com/" frameborder="0" width="100%"></iframe>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+IMP Links
+
+retun value in some id js:-
+    https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions3
+    https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_return
+
+hidden video info js:-
+    https://stackoverflow.com/questions/42193700/detect-when-inspect-element-is-open
+    https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+
+meta-tag addition:-
+    <script>
+        var a = 'askjd jad';
+        var link = document.createElement('meta');
+        link.setAttribute('name', 'description');
+        link.content = a;
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week2 - jquery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        selector:-
+        <p class="selector">class selector - click me to hide</p>
+        <p id="selector">id selector - click me to hide</p>
+        <script>
+            $(document).ready(function(){
+                $(".selector").click(function(){
+                    $(".selector").hide();
+                });
+            });
+        </script> 
+        <script>
+            $(document).ready(function(){
+                $("#selector").click(function(){
+                    $("#selector").hide();
+                });
+            });
+        </script>
+    </div>
+
+    <div>
+        mouse events:-
+        <p class="mouseeventtry">try here</p>
+        <p class="mouseeventoutput"></p>
+        <script>
+            $(document).ready(function(){
+                $('.mouseeventtry').click(function(){
+                    $('.mouseeventoutput').html("click event");
+                });
+
+                $('.mouseeventtry').dblclick(function(){
+                    $('.mouseeventoutput').html("dblclick event");
+                });
+
+                $('.mouseeventtry').mouseenter(function(){
+                    $('.mouseeventoutput').html("mouseenter event");
+                });
+
+                $('.mouseeventtry').mouseleave(function(){
+                    $('.mouseeventoutput').html("mouseleave event");
+                });
+            });
+        </script>
+    </div>
+
+    <div>
+        keyboard events:-
+        <input class="keyboardeventtry1" placeholder="try keypress events here">
+        <input class="keyboardeventtry2" placeholder="try keydown events here">
+        <input class="keyboardeventtry3" placeholder="try keyup events here">
+        <p class="keyboardeventoutput"></p>
+        <script>
+            $(document).ready(function(){
+                $('.keyboardeventtry1').keypress(function(){
+                    $('.keyboardeventoutput').html("keypress event");
+                });
+
+                $('.keyboardeventtry2').keydown(function(){
+                    $('.keyboardeventoutput').html("keydown event");
+                });
+
+                $('.keyboardeventtry3').keyup(function(){
+                    $('.keyboardeventoutput').html("keyup event");
+                });
+            });
+        </script>
+    </div>
+
+    <div>
+        form events:-
+        <form action="#" class="formevent" autocomplete="off">
+            <input class="formeventtry" placeholder="try form events here" name="form_event">
+            <input class="formeventtry1" placeholder="try change events here" name="form_event1">
+            <input type="submit" value="Submit">
+        </form>
+        <p class="formeventoutput"></p>
+        <script>
+            $(document).ready(function(){
+                $('.formeventtry1').change(function(){
+                    $('.formeventoutput').html("change event");
+                });
+
+                $('.formeventtry').blur(function(){
+                    $('.formeventoutput').html("blur event");
+                });
+
+                $('.formeventtry').focus(function(){
+                    $('.formeventoutput').html("focus event");
+                });
+
+                $('.formevent').submit(function(){
+                    $('.formeventoutput').html("submit event");
+                });
+            });
+        </script>
+    </div>
+
+    <div>
+        Hide/Show :-
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <p class="hide-show">If you click on the "Hide" button, It will disappear.</p>
+        <script>
+            $(document).ready(function(){
+              $("#hide").click(function(){
+                $(".hide-show").hide();
+              });
+              $("#show").click(function(){
+                $(".hide-show").show();
+              });
+            });
+        </script>
+    </div>
+    
+    <div>
+        Fade in/out :-
+        <button id="fade-out">fade-out</button>
+        <button id="fade-in">fade-in</button>
+        <p class="fade-in-out">If you click on the button, It will fade-in-out.</p>
+        <script>
+            $(document).ready(function(){
+              $("#fade-out").click(function(){
+                $(".fade-in-out").fadeOut();
+              });
+              $("#fade-in").click(function(){
+                $(".fade-in-out").fadeIn();
+              });
+            });
+        </script>
+    </div>
+
+    <div>
+        slide :-
+        <button id="slide">slide</button>
+        <p class="slideToggle">If you click on the button, It will slide.</p>
+        <script>
+            $(document).ready(function(){
+              $("#slide").click(function(){
+                $(".slideToggle").slideToggle();
+              });
+            });
+        </script>
+    </div>
+
+    <div>
+        animation :-
+        <button id="animationleft">move back</button>
+        <button id="animationright">move right</button>
+        <div style="background:#98bf21;height:50px;width:50px;position: relative;" class="animativebox"></div>
+        <script> 
+            $(document).ready(function(){
+                $("#animationleft").click(function(){
+                    $(".animativebox").animate({left: '0px'});
+                });
+                $("#animationright").click(function(){
+                    $(".animativebox").animate({left: '500px'});
+                });
+            });
+        </script> 
+    </div>
+
+    <div>
+        Chaining:-
+        <p class="chainingp">If you click on the button, It will start chaining.</p>
+        <button id="chainingbtn">start chaining</button>
+        <script>
+            $(document).ready(function(){
+                $("#chainingbtn").click(function(){
+                    $(".chainingp").css("color", "red").slideUp(1000).slideDown(2000);
+                });
+            });
+        </script>
+    </div>
+
+    <div>
+        Add:-
+        <button id="addlistbtn">Add list</button>
+        <button id="removelistbtn">remove list / empty ol</button>
+        <ol class="addlistol">
+            <li>List item 1</li>
+            <li>List item 2</li>
+        </ol>
+        <script>
+            $(document).ready(function(){
+                $("#addlistbtn").click(function(){
+                    $(".addlistol").append("<li>Appended item</li>");
+                });
+
+                $("#removelistbtn").click(function(){
+                    $(".addlistol li").last().remove();
+                });
+            });
+        </script>
+    </div>
+    
+</body>
+</html>
