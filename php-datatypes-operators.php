@@ -191,9 +191,6 @@ $null_1 = null;
         if ($x !== 90) {
             echo "x !== 90";
         }?>
-        
-        <h5>Conditional Assignment Operators</h5>
-
     </div>
 
     <div>
