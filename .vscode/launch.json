@@ -8,8 +8,8 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost/jay-project",
-            "webRoot": "${fileBasename}"
+            "url": "http://localhost/jay-project/php-superglobal-var.php",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
