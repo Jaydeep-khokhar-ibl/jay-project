@@ -1,5 +1,8 @@
 IMP Links
 
+pl search link:-
+	https://www.google.com/search?hl=en&as_q=precious+life&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=countryIN&as_qdr=all&as_sitesearch=precious-life.in&as_occt=any&safe=images&as_filetype=&tbs=
+
 retun value in some id js:-
     https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_functions3
     https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_return
