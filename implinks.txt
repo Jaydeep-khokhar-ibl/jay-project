@@ -11,6 +11,8 @@ retun value in some id js:-
 hidden video info js:-
     https://stackoverflow.com/questions/42193700/detect-when-inspect-element-is-open
     https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	<video poster="PATH-TO-STILL-IMAGE" autoplay="autoplay" loop="loop" controls="controls" width="640" height="360">
+    <source src="PATH-TO-VIDEO" type="video/mp4"></video>
 
 meta-tag addition:-
     <script>
@@ -20,3 +22,5 @@ meta-tag addition:-
         link.content = a;
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
+
+https://www.adamenfroy.com/best-remote-desktop-software-access-tools
